@@ -175,7 +175,7 @@
                         <ul class="list-unstyled mb-0">
                             <li class="mb-2">
                                 <i class="fas fa-phone-square fa-fw fa-lg mr-2 "></i>
-                                <a class="resume-link" href="tel:+6287777480731">+62 877 7748 0731</a>
+                                <a class="resume-link" href="tel:+6285121345682">+62 851 2134 5682</a>
                             </li>
                             <li class="mb-2">
                                 <i class="fas fa-envelope-square fa-fw fa-lg mr-2"></i>
@@ -231,6 +231,23 @@
 
                         <section class="work-section py-3">
                             <h3 class="text-uppercase resume-section-heading mb-4">Work Experiences</h3>
+
+                            <div class="item mb-3">
+                                <div class="item-heading row align-items-center mb-2">
+                                    <h4 class="item-title col-12 col-md-6 col-lg-5 mb-2 mb-md-0">Backend Developer</h4>
+                                    <div class="item-meta col-12 col-md-6 col-lg-7 text-muted text-left text-md-right">
+                                        <strong>Dikshatek Indonesia</strong> | Oct 2025 - Mar 2026
+                                    </div>
+                                </div>
+                                <div class="item-content">
+                                    <ul class="resume-list">
+                                        <li>Developed backend API services for BRI's EDC Single App application.</li>
+                                        <li>Built microservices architecture using Golang, PostgreSQL, with Kong as API Gateway.</li>
+                                        <li>Deployed services on OpenShift Container Platform (OCP).</li>
+                                        <li>Created background jobs for transaction processing.</li>
+                                    </ul>
+                                </div>
+                            </div>
 
                             <div class="item mb-3">
                                 <div class="item-heading row align-items-center mb-2">
@@ -401,8 +418,8 @@
 
                 <div class="mt-3">
                     <br>
-                    <a href="https://cv-anwar-muthohari.netlify.app/portofolio.html" class="btn-sm btn-primary">Portfolio</a>
-                    <a href="https://cv-anwar-muthohari.netlify.app/ats-friendly.html"
+                    <a href="portofolio.html" class="btn-sm btn-primary">Portfolio</a>
+                    <a href="ats-friendly.html"
                        class="btn-sm btn-primary ml-2">ATS Version</a>
                 </div>
             </div>
@@ -464,18 +481,30 @@
             const text = input.toLowerCase();
             if (text.includes('experience') || text.includes('work') || text.includes('job')) {
                 return "Anwar has over 9 years of experience. He's currently a Software Engineer II at Mekari. Previously, he worked at Pegadaian, Mitra Integrasi Informatika, Javan Cipta Solusi, and Grindfield.";
-            } else if (text.includes('skill') || text.includes('tech') || text.includes('stack')) {
-                return "His core stack includes PHP (Laravel, CodeIgniter), Golang, Python, PostgreSQL, AWS, Docker, and Kubernetes. He focuses on Clean Architecture and scalable systems.";
-            } else if (text.includes('contact') || text.includes('email') || text.includes('phone') || text.includes('hire')) {
-                return "You can reach Anwar via email at <a href='mailto:anwar.muthohari@gmail.com'>anwar.muthohari@gmail.com</a> or phone at +62 877 7748 0731.";
-            } else if (text.includes('education') || text.includes('university') || text.includes('study')) {
-                return "He holds a Bachelor's Degree in Informatics Engineering from STT Garut with a GPA of 3.23.";
-            } else if (text.includes('hi') || text.includes('hello')) {
-                return "Hi there! How can I help you learn more about Anwar's qualifications?";
-            } else {
-                return "I'm a simple AI assistant. I can tell you about Anwar's <b>experience</b>, <b>skills</b>, <b>education</b>, or <b>contact</b> info. What would you like to know?";
+            function getBotResponse(input) {
+                const text = input.toLowerCase();
+                if (text.includes('hi') || text.includes('hello')) {
+                    return "Hi there! I'm Anwar's AI assistant. You can ask me about his <b>experience</b>, <b>skills</b>, <b>education</b>, or specific companies like <b>BRI</b>, <b>Mekari</b>, or <b>Pegadaian</b>. What would you like to know?";
+                } else if (text.includes('bri')) {
+                    return "Anwar has extensive experience with BRI through two different roles:<br>1. <b>Dikshatek Indonesia:</b> Developed the <b>EDC Single App</b> using Golang, PostgreSQL, and Kong Gateway on OpenShift (OCP).<br>2. <b>Mitra Integrasi Informatika (MII):</b> Worked on <b>BRISPOT Consumer</b>, building a Node.js middleware and Laravel Queues for async credit score checks (SLIK/Pefindo).";
+                } else if (text.includes('mekari')) {
+                    return "At Mekari, Anwar worked as a Software Engineer II, focusing on scalable SaaS. He maintained core HRIS modules for 10k+ enterprise clients and successfully reduced page load times by 35% through query optimization.";
+                } else if (text.includes('pegadaian')) {
+                    return "At Pegadaian, Anwar served as a Senior Software Engineer. He refactored legacy APIs to modern Laravel and Golang, and built key services like the PDS API and G-Reward system.";
+                } else if (text.includes('ai') || text.includes('llm')) {
+                    return "Anwar is pioneering Local LLM integration. His latest project is an <b>LLM-Powered Maps Backend</b> using FastAPI and Llama 3 (Ollama), achieving 95% accuracy in intent extraction from natural language.";
+                } else if (text.includes('experience') || text.includes('work') || text.includes('job')) {
+                    return "Anwar has over 9 years of experience. He's currently a Backend Developer at Dikshatek (BRI Project). Previously, he held key roles at Mekari, Pegadaian, MII, Javan, and Grindfield.";
+                } else if (text.includes('skill') || text.includes('tech') || text.includes('stack')) {
+                    return "His core stack includes PHP (Laravel, CodeIgniter), Golang, Python (FastAPI), PostgreSQL, AWS, Docker, and Kubernetes. He's an expert in Clean Architecture and scalable systems.";
+                } else if (text.includes('contact') || text.includes('email') || text.includes('phone') || text.includes('hire')) {
+                    return "You can reach Anwar via email at <a href='mailto:anwar.muthohari@gmail.com'>anwar.muthohari@gmail.com</a>, phone at +62 851 2134 5682, or click here to <a href='https://wa.me/6285121345682' target='_blank'>Chat via WhatsApp</a>.";
+                } else if (text.includes('education') || text.includes('university') || text.includes('study')) {
+                    return "He holds a Bachelor's Degree in Informatics Engineering from STT Garut with a GPA of 3.23.";
+                } else {
+                    return "I'm a simple AI assistant. I can tell you about Anwar's <b>BRI projects</b>, <b>Mekari</b>, <b>Pegadaian</b>, <b>AI/LLM skills</b>, or <b>contact</b> info. What would you like to know?";
+                }
             }
-        }
 
         function handleSend() {
             const text = chatInput.value.trim();
