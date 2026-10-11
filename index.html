@@ -169,7 +169,7 @@
                 <div class="row align-items-center">
                     <div class="resume-title col-12 col-md-6 col-lg-8 col-xl-9">
                         <h2 class="resume-name mb-0 text-uppercase">Anwar Muthohari</h2>
-                        <p class="resume-tagline">Senior Software Engineer | Backend & AI Native Specialist</p>
+                        <p class="resume-tagline">Senior Software Engineer | Backend Specialist</p>
                     </div>
                     <div class="resume-contact col-12 col-md-6 col-lg-4 col-xl-3">
                         <ul class="list-unstyled mb-0">
@@ -212,9 +212,6 @@
                             <h3 class="text-uppercase resume-section-heading mb-4">Skills</h3>
                             <div class="item mb-3">
                                 <div class="item-content">
-                                    <p><strong>AI Native Engineering:</strong></p>
-                                    <p>&nbsp;&nbsp;&nbsp;&nbsp;<strong>LLM & RAG:</strong> Local LLM Deployment (vLLM, Ollama), RAG (Retrieval Augmented Generation), Vector Databases, Prompt Engineering.</p>
-                                    <p>&nbsp;&nbsp;&nbsp;&nbsp;<strong>AI Workflow:</strong> AI Agentic Workflow, FastAPI + LLM Integration, Semantic Search.</p>
                                     <p><strong>Languages & Frameworks:</strong> PHP (Laravel, CodeIgniter, Yii), Golang
                                         (Echo, Gin, Gorilla Mux), Python (FastAPI, Django), JavaScript (Node.js, Vue.js)
                                     </p>
@@ -244,11 +241,9 @@
                                 </div>
                                 <div class="item-content">
                                     <ul class="resume-list">
-                                        <li><strong>Projects:</strong> Cloud Migration Octo Mobile API (CIMB) — Java to Go migration and AWS Cloud adoption.</li>
-                                        <li>Assigned to CIMB client project as Backend Developer for Octo Mobile API modernization.</li>
-                                        <li>Worked on Cloud Migration Octo Mobile API, migrating backend services from Java to Go.</li>
-                                        <li>Supported migration from on-premise (Promise) environment to AWS Cloud.</li>
-                                        <li>Improved backend service scalability, maintainability, and cloud readiness for mobile banking APIs.</li>
+                                        <li>Modernized CIMB Octo Mobile API backend by migrating core services from Java to Go.</li>
+                                        <li>Executed cloud platform migration from on-premise (Promise) environment to AWS Cloud.</li>
+                                        <li>Improved backend service scalability, reliability, and cloud readiness for mobile banking APIs.</li>
                                     </ul>
                                 </div>
                             </div>
@@ -280,7 +275,7 @@
                                 </div>
                                 <div class="item-content">
                                     <ul class="resume-list">
-                                        <li>Architected microservices using Golang/PHP, integrating with Talent squad (monolithic PHP Yii).</li>
+                                        <li>Architected microservices using Golang/PHP, integrating with Talenta squad (monolithic PHP Yii).</li>
                                         <li>Built public Go API for external integration and migrated monolithic architecture to microservices, developing 3-4 new Golang services.</li>
                                         <li>Optimized database queries and async job processing, handling 50k+ concurrent requests daily.</li>
                                         <li>Implemented unit and integration tests (PHPUnit, GoTest), maintaining 90%+ code coverage.</li>
@@ -511,18 +506,16 @@
                     return "At Mekari, Anwar worked as a Software Engineer II. He integrated the Talenta squad (monolithic PHP Yii), built a public Go API for external integration, and migrated the legacy monolithic architecture to microservices, developing 3-4 new Golang services.";
                 } else if (text.includes('pegadaian')) {
                     return "At Pegadaian, Anwar served as a Senior Software Engineer. He refactored legacy monoliths to modular architecture, developed the Pegadaian Digital Mobile API using CodeIgniter, built Web point/super admin tools using Laravel, and developed 2 new Golang services for high-concurrency modules.";
-                } else if (text.includes('ai') || text.includes('llm') || text.includes('agent') || text.includes('native')) {
-                    return "Anwar is an AI Native Engineer. He specializes in LLM Fine-tuning (LoRA/QLoRA), RAG systems, and building AI Agentic workflows with LangChain. His recent project is a Personal Knowledge Agent that indexes codebases into Vector Databases.";
                 } else if (text.includes('experience') || text.includes('work') || text.includes('job')) {
                     return "Anwar has over 10 years of experience. He's currently a Backend Developer at Sigmatech (placement at CIMB), working on Cloud Migration Octo Mobile API from Java to Go and migrating from on-premise (Promise) to AWS Cloud. Previously, he worked at Dikshatek, Mekari, Pegadaian, MII, Javan, and Grindfield.";
                 } else if (text.includes('skill') || text.includes('tech') || text.includes('stack')) {
-                    return "His core stack includes PHP (Laravel, CodeIgniter), Golang, Python (FastAPI), PostgreSQL, AWS, Docker, and Kubernetes. He's an expert in Clean Architecture and scalable systems. His AI Native skills include LLM Fine-tuning (LoRA/QLoRA), RAG systems, vLLM, and Vector Databases (Pinecone/Milvus).";
+                    return "His core stack includes PHP (Laravel, CodeIgniter), Golang, Python (FastAPI), PostgreSQL, AWS, Docker, and Kubernetes. He's an expert in Clean Architecture and scalable systems.";
                 } else if (text.includes('contact') || text.includes('email') || text.includes('phone') || text.includes('hire')) {
                     return "You can reach Anwar via email at <a href='mailto:anwar.muthohari@gmail.com'>anwar.muthohari@gmail.com</a>, phone at +62 851 2134 5682, or click here to <a href='https://wa.me/6285121345682' target='_blank'>Chat via WhatsApp</a>.";
                 } else if (text.includes('education') || text.includes('university') || text.includes('study')) {
                     return "He holds a Bachelor's Degree in Informatics Engineering from STT Garut with a GPA of 3.23.";
                 } else {
-                    return "I'm a simple AI assistant. I can tell you about Anwar's <b>BRI projects</b>, <b>Mekari</b>, <b>Pegadaian</b>, <b>AI/LLM skills</b>, or <b>contact</b> info. What would you like to know?";
+                    return "I'm a simple AI assistant. I can tell you about Anwar's <b>BRI projects</b>, <b>Mekari</b>, <b>Pegadaian</b>, or <b>contact</b> info. What would you like to know?";
                 }
             }
 
