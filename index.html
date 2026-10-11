@@ -199,7 +199,7 @@
                         <h4 class="item-title mb-md-0" style="color: #d01414">Professional Summary</h4>
                         <br>
                         <p class="mb-2">
-                            Senior Software Engineer with 10+ years of experience specializing in high-concurrency backend systems for FinTech, Banking, and SaaS. Proven track record in orchestrating complex microservices using Go, PHP (Laravel), and Python. Currently pioneering the integration of Local LLM and Agentic AI workflows to optimize enterprise-grade API performance. Dedicated to clean architecture, TDD, and CI/CD automation. Passionate about decoupling legacy monoliths and shipping scalable, production-ready solutions. (Started career in 2016).
+                            Senior Software Engineer with 10+ years of experience specializing in high-concurrency backend systems for FinTech, Banking, and SaaS. Proven track record in orchestrating complex microservices using Go, PHP (Laravel), and Python. Currently working on banking API modernization and cloud migration initiatives, including Java-to-Go service migration and AWS Cloud adoption. Dedicated to clean architecture, TDD, and CI/CD automation. Passionate about decoupling legacy monoliths and shipping scalable, production-ready solutions.
                         </p>
                     </div>
                 </div>
@@ -234,6 +234,24 @@
 
                         <section class="work-section py-3">
                             <h3 class="text-uppercase resume-section-heading mb-4">Work Experiences</h3>
+
+                                                            <div class="item mb-3">
+                                <div class="item-heading row align-items-center mb-2">
+                                    <h4 class="item-title col-12 col-md-6 col-lg-5 mb-2 mb-md-0">Backend Developer</h4>
+                                    <div class="item-meta col-12 col-md-6 col-lg-7 text-muted text-left text-md-right">
+                                        <strong><a href="https://sigma-tech.co.id/" target="_blank">Sigmatech</a></strong> (Client: <strong>CIMB</strong>) | Apr 2026 - Present
+                                    </div>
+                                </div>
+                                <div class="item-content">
+                                    <ul class="resume-list">
+                                        <li><strong>Projects:</strong> Cloud Migration Octo Mobile API (CIMB) — Java to Go migration and AWS Cloud adoption.</li>
+                                        <li>Assigned to CIMB client project as Backend Developer for Octo Mobile API modernization.</li>
+                                        <li>Worked on Cloud Migration Octo Mobile API, migrating backend services from Java to Go.</li>
+                                        <li>Supported migration from on-premise (Promise) environment to AWS Cloud.</li>
+                                        <li>Improved backend service scalability, maintainability, and cloud readiness for mobile banking APIs.</li>
+                                    </ul>
+                                </div>
+                            </div>
 
                             <div class="item mb-3">
                                 <div class="item-heading row align-items-center mb-2">
@@ -484,7 +502,9 @@
         function getBotResponse(input) {
                 const text = input.toLowerCase();
                 if (text.includes('hi') || text.includes('hello')) {
-                    return "Hi there! I'm Anwar's AI assistant. You can ask me about his <b>experience</b>, <b>skills</b>, <b>education</b>, or specific companies like <b>BRI</b>, <b>Mekari</b>, or <b>Pegadaian</b>. What would you like to know?";
+                    return "Hi there! I'm Anwar's AI assistant. You can ask me about his <b>experience</b>, <b>skills</b>, <b>education</b>, or specific companies like <b>Sigmatech</b>, <b>CIMB</b>, <b>BRI</b>, <b>Mekari</b>, or <b>Pegadaian</b>. What would you like to know?";
+                } else if (text.includes('sigmatech') || text.includes('cimb') || text.includes('octo')) {
+                    return "Anwar is currently working at <b>Sigmatech</b> with placement at <b>CIMB</b>. He works on the <b>Cloud Migration Octo Mobile API</b> project, migrating backend services from <b>Java to Go</b> and moving from <b>on-premise (Promise)</b> to <b>AWS Cloud</b>.";
                 } else if (text.includes('bri')) {
                     return "Anwar has extensive experience with BRI through two different roles:<br>1. <b>Dikshatek Indonesia:</b> Developed the <b>EDC Single App</b> using Golang, PostgreSQL, and Kong Gateway on OpenShift (OCP).<br>2. <b>Mitra Integrasi Informatika (MII):</b> Worked on <b>BRISPOT Consumer</b>, architected async SOAP integration with Pefindo/Biro Kredit via Laravel Queues, and built Node.js middleware for Laravel-to-Credit Card DB with Stored Procedures.";
                 } else if (text.includes('mekari')) {
@@ -494,7 +514,7 @@
                 } else if (text.includes('ai') || text.includes('llm') || text.includes('agent') || text.includes('native')) {
                     return "Anwar is an AI Native Engineer. He specializes in LLM Fine-tuning (LoRA/QLoRA), RAG systems, and building AI Agentic workflows with LangChain. His recent project is a Personal Knowledge Agent that indexes codebases into Vector Databases.";
                 } else if (text.includes('experience') || text.includes('work') || text.includes('job')) {
-                    return "Anwar has over 10 years of experience. He's currently a Backend Developer at Dikshatek (BRI Project). Previously, he held key roles at Mekari, Pegadaian, MII, Javan, and Grindfield.";
+                    return "Anwar has over 10 years of experience. He's currently a Backend Developer at Sigmatech (placement at CIMB), working on Cloud Migration Octo Mobile API from Java to Go and migrating from on-premise (Promise) to AWS Cloud. Previously, he worked at Dikshatek, Mekari, Pegadaian, MII, Javan, and Grindfield.";
                 } else if (text.includes('skill') || text.includes('tech') || text.includes('stack')) {
                     return "His core stack includes PHP (Laravel, CodeIgniter), Golang, Python (FastAPI), PostgreSQL, AWS, Docker, and Kubernetes. He's an expert in Clean Architecture and scalable systems. His AI Native skills include LLM Fine-tuning (LoRA/QLoRA), RAG systems, vLLM, and Vector Databases (Pinecone/Milvus).";
                 } else if (text.includes('contact') || text.includes('email') || text.includes('phone') || text.includes('hire')) {
